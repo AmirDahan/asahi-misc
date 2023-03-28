@@ -13,8 +13,8 @@ fi
 
 install () {
     #Add udev rule.
-    echo 'ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", RUN+="/usr/bin/sh /usr/share/asahi-misc/power.sh powersave off"' > /etc/udev/rules.d/10-powersave.rules
-    echo 'ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", RUN+="/usr/bin/sh /usr/share/asahi-misc/power.sh powersave on"' >> /etc/udev/rules.d/10-powersave.rules
+    echo 'ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", RUN+="/usr/bin/sh /usr/share/asahi-misc/power.sh powersave off"' > /etc/udev/rules.d/10-powersave.rules
+    echo 'ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", RUN+="/usr/bin/sh /usr/share/asahi-misc/power.sh powersave on"' >> /etc/udev/rules.d/10-powersave.rules
     echo 'KERNEL=="macsmc-battery", SUBSYSTEM=="power_supply", ATTR{charge_control_end_threshold}="80"' >> /etc/udev/rules.d/10-powersave.rules
 }
 
