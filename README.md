@@ -1,10 +1,10 @@
 # asahi-misc
-A set of miscellaneous bash scripts that do various fun things on asahi linux.
+A set of miscellaneous shell scripts that do various fun things on asahi linux.
 
 # Disclaimer!
-These scripts are highly experimental and have the potential to break your installation of asahi linux.<br />
-Recovering is possible though, And protection against misconfigured settings exist.<br />
-But still, Keep that in mind.<br />
+The bootloader script requires linux-asahi-edge, If you use something different<br />
+then pleasee change it in the script, Additionally please double check that the<br />
+ROOTUUID is correct, Otherwise the bootloader might fail to boot you back to asahi.<br />
 These scripts were tested on asahi linux (Arch linux ARM) on an M2 MacbookAir 13 inch.<br />
 
 # How to install
@@ -17,8 +17,9 @@ sudo mv asahi-misc /usr/share
 # What does this thing do?
 
 **bootloader.sh**<br />
-``download``: Downloads or updates the m1n1 bootloader from https://github.com/AsahiLinux/m1n1 and puts the file in /usr/local/bin<br />
-``generate``: Backs up the bootloader and generates a new one with an integrated kernel, initramfs and parameters.<br />
+``install``: Installs a packman hook that automatically regenerates the bootloader when updating.<br />
+``uninstall``: Uninstalls the packman hook.<br />
+``generate``: Manually regenerates the bootloader, use the ``def`` argument to use defaults.<br />
 
 **power.sh**<br />
 ``install``: Installs a udev rule to improve powersavings.<br />
