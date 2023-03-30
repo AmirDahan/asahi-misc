@@ -136,7 +136,7 @@ case $1 in
   *)
     echo "Unknown argument."
     echo "List of available arguments:"
-    echo "install - Installs a packman hook to regenerate the bootloader when updating."
+    echo "install - Installs a pacman hook to regenerate the bootloader when updating."
     echo "uninstall - Uninstall the pacman hook."
     echo "generate - Regenerate the bootloader manually."
     ;;

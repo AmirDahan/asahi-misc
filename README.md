@@ -17,8 +17,8 @@ sudo mv asahi-misc /usr/share
 # What does this thing do?
 
 **bootloader.sh**<br />
-``install``: Installs a packman hook that automatically regenerates the bootloader when updating.<br />
-``uninstall``: Uninstalls the packman hook.<br />
+``install``: Installs a pacman hook that automatically regenerates the bootloader when updating.<br />
+``uninstall``: Uninstalls the pacman hook.<br />
 ``generate``: Manually regenerates the bootloader, use the ``def`` argument to use defaults.<br />
 
 **power.sh**<br />
